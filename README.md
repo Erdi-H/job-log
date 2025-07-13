@@ -10,7 +10,9 @@ My future plans are to add some lightweight NLP features, so you can paste raw j
 ## Tools
 
 Frontend: Angular.js
+
 Backend: Node.js + Express
+
 Database: SQLite
 
 ## Installation
@@ -19,7 +21,7 @@ Anyone is free to use code from this repo.
 
 - Clone repo
   ```bash
-  git clone _____________________________
+  git clone https://github.com/Erdi-H/job-log.git
   ```
 
 ## TODO
