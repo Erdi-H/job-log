@@ -1,0 +1,36 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s, border-bottom 0.2s;
+
+      &.active {
+        border-bottom: 2px solid #000000;
+        color: #000000;
+        font-weight: bolder;
+      }
+
+      &:hover {
+        font-weight: bolder;
+      }
+    }
+  }
+}
