@@ -1,1 +1,41 @@
-<p>jobs-list works!</p>
+<div class="top-bar">
+  <div class="sort-options">
+    <label for="sortSelect">Sort by</label>
+    <select
+      id="sortSelect"
+      [(ngModel)]="selectedSort"
+      (ngModelChange)="sortJobs()"
+    >
+      <option disabled selected value="">Select</option>
+      <option value="company">Company</option>
+      <option value="role">Role</option>
+      <option value="location">Location</option>
+      <option value="format">Format</option>
+      <option value="status">Status</option>
+      <option value="dateApplied">Date Applied</option>
+    </select>
+    <button
+      class="sort-direction-btn"
+      (click)="toggleSortDirection()"
+      [attr.aria-label]="isAscending ? 'Ascending' : 'Descending'"
+      [attr.title]="isAscending ? 'Ascending' : 'Descending'"
+    >
+      @if (isAscending) {
+      <span>&#9650;</span>
+      } @else {
+      <span>&#9660;</span>
+      }
+    </button>
+  </div>
+  <div class="add-job-parent">
+    <button class="add-job" (click)="addJob()">+</button>
+  </div>
+</div>
+
+<div>
+  @for (job of jobList; track job.jobId) {
+  <div>
+    {{ job.company }}
+  </div>
+  }
+</div>
